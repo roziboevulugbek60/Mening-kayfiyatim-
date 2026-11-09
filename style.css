@@ -1,0 +1,445 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+
+:root{
+
+    --bg:#f1f5f9;
+    --card:white;
+    --text:#111827;
+    --button:#e5e7eb;
+    --primary:#8b5cf6;
+
+}
+
+
+
+.dark{
+
+    --bg:#111827;
+    --card:#1f2937;
+    --text:white;
+    --button:#374151;
+
+}
+
+
+
+
+
+body{
+
+    min-height:100vh;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    transition:.3s;
+
+}
+
+
+
+
+
+
+
+.app{
+
+    padding:20px;
+
+}
+
+
+
+
+
+/* HEADER */
+
+
+header{
+
+    background:var(--card);
+
+    padding:20px;
+
+    border-radius:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.1);
+
+}
+
+
+
+header h1{
+
+    color:var(--primary);
+
+}
+
+
+
+#themeBtn{
+
+    border:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+}
+
+
+
+
+
+
+
+
+/* GAME */
+
+
+.game{
+
+    max-width:900px;
+
+    margin:30px auto;
+
+    text-align:center;
+
+}
+
+
+
+
+.game h2{
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+
+
+/* MOODS */
+
+
+.moods{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+
+
+
+.moods button{
+
+    height:130px;
+
+    border:none;
+
+    border-radius:25px;
+
+    background:var(--card);
+
+    cursor:pointer;
+
+    font-size:45px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.1);
+
+    transition:.3s;
+
+    color:var(--text);
+
+}
+
+
+
+
+
+.moods button span{
+
+    display:block;
+
+    font-size:18px;
+
+    margin-top:10px;
+
+}
+
+
+
+
+.moods button:hover{
+
+    transform:translateY(-8px) scale(1.03);
+
+}
+
+
+
+
+
+
+
+
+
+/* RESULT */
+
+
+.result{
+
+    margin-top:30px;
+
+    background:var(--card);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.15);
+
+}
+
+
+
+
+
+#emoji{
+
+    font-size:90px;
+
+    animation:float 2s infinite;
+
+}
+
+
+
+
+@keyframes float{
+
+
+0%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+
+100%{
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+#advice{
+
+    margin:15px;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+
+#score{
+
+    color:var(--primary);
+
+    font-size:30px;
+
+}
+
+
+
+
+
+
+
+/* HISTORY */
+
+
+.history{
+
+    margin-top:30px;
+
+    background:var(--card);
+
+    padding:25px;
+
+    border-radius:20px;
+
+}
+
+
+
+#historyList{
+
+    list-style:none;
+
+    margin-top:15px;
+
+}
+
+
+
+
+#historyList li{
+
+    background:var(--button);
+
+    padding:12px;
+
+    margin:10px 0;
+
+    border-radius:12px;
+
+    animation:show .3s;
+
+}
+
+
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+
+
+
+footer{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#777;
+
+}
+
+
+
+footer b{
+
+    color:var(--primary);
+
+}
+
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+.moods{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+.moods button{
+
+    height:110px;
+
+    font-size:35px;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:400px){
+
+
+.moods{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
